@@ -25,7 +25,7 @@ const Index = () => {
             ? { id: 1, name: "Standard", quantity: 1 }
             : { id: 2, name: "Premium", quantity: 1 };
         const response = await fetch(
-          `http://localhost:3131/api/v1/users/payments?plan=${user._id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}api/v1/users/payments?plan=${user._id}`,
           {
             method: "POST",
             headers: {
