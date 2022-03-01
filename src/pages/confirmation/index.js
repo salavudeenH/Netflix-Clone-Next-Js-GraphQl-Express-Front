@@ -11,7 +11,7 @@ const Index = () => {
       
         <div className="text-center mt-32">
            <h2>Merci d&apos;avoir Souscrit profiter des video</h2>
-           <button className={styles.button} onClick={() => router.replace("/browse")}>Aventure Netflix</button>
+           <button className={styles.button} onClick={() => router.push("/browse")}>Aventure Netflix</button>
         </div>
     );
 }
