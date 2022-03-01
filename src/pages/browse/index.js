@@ -16,11 +16,11 @@ import DocCategorie from "../../component/DocCategorie/Slider"
 import Link from "next/link";
 import { AiOutlineSearch,AiTwotoneBell } from 'react-icons/ai';
 import suscribe from "../../HOC/suscribe"
-import { useRouter } from "next/router";
+import { UseRouter } from "next/router";
 
 const Index = () => {
-    const [user, setUser] = useState({});
-    const router = useRouter();
+    const [user, SetUser] = useState({});
+    const router = UseRouter();
     const { loading, error, data } = useQuery(getMovie);
     useEffect(() => {
         document.body.style.backgroundColor = "black";
@@ -28,7 +28,7 @@ const Index = () => {
         authService
           .getUser(token)
           .then((data) => {
-            setUser(data);
+            SetUser(data);
           })
           .catch((err) => console.log(err));
           

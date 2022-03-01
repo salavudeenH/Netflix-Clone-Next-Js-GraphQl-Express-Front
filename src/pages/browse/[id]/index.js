@@ -1,10 +1,10 @@
 import React,{useEffect} from 'react';
 import { getMovieId } from "../../../graphql/queries/movie";
 import { useQuery } from "@apollo/react-hooks";
-import { useRouter } from "next/router";
+import { UseRouter } from "next/router";
 import styles from "./index.module.scss"
 export default function index() {
-    const router = useRouter();
+    const router = UseRouter();
     useEffect(() => {
         document.body.style.backgroundColor = "black";
     })

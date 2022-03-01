@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import withAuth from "../../../HOC/withAuth";
 
 const Index = () => {
-    const [plan, setPlan] = useState(null);
+    const [plan, SetPlan] = useState(null);
     const subscribeToPlan = async () => {
         console.log(plan);
         const reqBody =
@@ -52,15 +52,15 @@ const Index = () => {
             <div className={styles.plan__Container}>
                 <div className={styles.planGrid__header}>
                    <label>
-                       <input type="radio" name="plan" value="0" onChange={(e) => setPlan(e.target.value)}/>
+                       <input type="radio" name="plan" value="0" onChange={(e) => SetPlan(e.target.value)}/>
                        <span className={styles.plan}>Essentiel</span>
                    </label>
                    <label>
-                       <input type="radio" value="1" name="plan" onChange={(e) => setPlan(e.target.value)} />
+                       <input type="radio" value="1" name="plan" onChange={(e) => SetPlan(e.target.value)} />
                        <span className={styles.plan}>Standard</span>
                    </label>
                    <label>
-                       <input type="radio" name="plan" value="2" onChange={(e) => setPlan(e.target.value)} />
+                       <input type="radio" name="plan" value="2" onChange={(e) => SetPlan(e.target.value)} />
                        <span className={styles.plan}>Premium</span>
                    </label>
                 </div>

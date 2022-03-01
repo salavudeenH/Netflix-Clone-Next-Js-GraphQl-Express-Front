@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import styles from './index.module.scss'
-import { useRouter } from "next/router";
+import { UseRouter } from "next/router";
 import authService from "../../../services/auth.service";
 
 export default function index() {
-    const router = useRouter();
+    const router = UseRouter();
     const {eid} = router.query
     const [user, setUser] = useState({email:eid});
     const [error, setError] = useState(false);

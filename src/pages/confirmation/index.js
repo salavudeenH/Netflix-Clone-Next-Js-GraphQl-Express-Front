@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import { useRouter } from "next/router";
+import { UseRouter } from "next/router";
 
 const Index = () => {
-    const router = useRouter();
+    const router = UseRouter();
     useEffect(() => {
         console.log(router.query);
     });

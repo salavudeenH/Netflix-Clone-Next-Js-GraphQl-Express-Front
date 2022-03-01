@@ -4,10 +4,10 @@ import Signin from '../../component/Signin/Signin'
 import Input  from '../../component/Input/Input'
 import Link from 'next/link'
 import authService from "../../services/auth.service";
-import { useRouter } from "next/router";
+import { UseRouter } from "next/router";
 import Message from "../../component/Message/Message";
 export default function index() {
-    const router = useRouter();
+    const router = UseRouter();
     const [user, setUser] = useState({});
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");

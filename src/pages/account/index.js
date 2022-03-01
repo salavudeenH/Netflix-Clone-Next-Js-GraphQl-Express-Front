@@ -4,13 +4,13 @@ import styles from "./index.module.scss"
 import Message from "../../component/Message/Message";
 
 export default function index() {
-    const [user, setUser] = useState({});
-    const [success, setSuccess] = useState(false);
-    const [disabled, setDisabled] = useState(true);
+    const [user, SetUser] = useState({});
+    const [success, SetSuccess] = useState(false);
+    const [disabled, SetDisabled] = useState(true);
     const clickDisabled = () => {
         var dialog = confirm("Vous êtes sur de modifier les informations");
         if (dialog) {
-            setDisabled(!disabled)
+            SetDisabled(!disabled)
         }
         else {
             return null
@@ -18,7 +18,7 @@ export default function index() {
         // confirm("Vous êtes sur de modifier l'adresse mail", )
     }
     const clickDisabledField = () => {
-        setDisabled(!disabled)
+        SetDisabled(!disabled)
     }
 
   const handleSubmit = (e) => {
@@ -28,9 +28,9 @@ export default function index() {
       .updateUser(token, user)
         .then((data) => {
             console.log(data);
-            setSuccess(true);
-            setUser(data.user);
-            setDisabled(!disabled)
+            SetSuccess(true);
+            SetUser(data.user);
+            SetDisabled(!disabled)
       })
       .catch((err) => console.log(err));
   };
@@ -40,7 +40,7 @@ export default function index() {
     authService
       .getUser(token)
       .then((data) => {
-        setUser(data);
+        SetUser(data);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -59,9 +59,9 @@ export default function index() {
             </div>
             <form className={styles.form__profil} onSubmit={(e) => handleSubmit(e)}>
             <div className={styles.Input__Container}>
-            <input type="text" value={(user && user.firstName) || ""} onChange={(e) => {setUser({ ...user, firstName: e.target.value })}}  disabled={disabled}></input>
-            <input type="text" value={(user && user.lastName) || ""} onChange={(e) => {setUser({ ...user, lastName: e.target.value })}} disabled={disabled}/>
-            <input type="text" value={(user && user.email) || ""} onChange={(e) => {setUser({ ...user, email: e.target.value })}}  disabled={disabled}></input>
+            <input type="text" value={(user && user.firstName) || ""} onChange={(e) => {SetUser({ ...user, firstName: e.target.value })}}  disabled={disabled}></input>
+            <input type="text" value={(user && user.lastName) || ""} onChange={(e) => {SetUser({ ...user, lastName: e.target.value })}} disabled={disabled}/>
+            <input type="text" value={(user && user.email) || ""} onChange={(e) => {SetUser({ ...user, email: e.target.value })}}  disabled={disabled}></input>
             </div>
             <div className="flex">
             <button type="submit" className={disabled ? styles.none : styles.Buttons }>Enregistrer</button>
