@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps}) {
   asPath == "/signup/planform" ? <SignupLayout> <Component {...pageProps} /></SignupLayout> :
   asPath == "/login" ? <MainLayout> <Component {...pageProps} /></MainLayout> :
   asPath == "/" ? <MainLayout> <Component {...pageProps} /></MainLayout> :
+  asPath == "/confirmation" ? <MainLayout> <Component {...pageProps} /></MainLayout> :
   <ApolloProvider client={client}>
   <Head><meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"></link>
