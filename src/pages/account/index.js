@@ -3,7 +3,7 @@ import authService from "../../services/auth.service";
 import styles from "./index.module.scss"
 import Message from "../../component/Message/Message";
 
-export default function index() {
+export default function Index() {
     const [user, SetUser] = useState({});
     const [success, SetSuccess] = useState(false);
     const [disabled, SetDisabled] = useState(true);

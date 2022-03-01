@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function index({children}) {
+export default function Index({children}) {
     return (
         <div>
             {children}

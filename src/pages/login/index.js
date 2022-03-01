@@ -6,11 +6,11 @@ import Link from 'next/link'
 import authService from "../../services/auth.service";
 import { UseRouter } from "next/router";
 import Message from "../../component/Message/Message";
-export default function index() {
+export default function Index() {
     const router = UseRouter();
-    const [user, setUser] = useState({});
-    const [error, setError] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("");
+    const [user, SetUser] = useState({});
+    const [error, SetError] = useState(false);
+    const [errorMessage, SetErrorMessage] = useState("");
 
 
     const handleSubmit = (e) => {
@@ -20,8 +20,8 @@ export default function index() {
         .then((data) => {
             console.log(data);
             if (data.message) {
-              setError(true);
-              setErrorMessage(data.message);
+              SetError(true);
+              SetErrorMessage(data.message);
               return false;
             }
             localStorage.setItem("token", data.token);
@@ -52,7 +52,7 @@ export default function index() {
         </Link>
        </div>
        <div className="flex justify-center pt-10">
-           <Signin placeholderEmail="Entrez votre mot de adresse mail" onChangeEmail={(e) => {setUser({...user,email:e.target.value})}} onChangePassword={(e) => {setUser({...user,password:e.target.value})}} placeholderPassword="Entrez votre mot de passe" onSubmit={(e) => handleSubmit(e)} requiredEmail="true" requiredPassword="true" typeEmail="email" typePassword="password" error={error ? true : false} message={errorMessage}>
+           <Signin placeholderEmail="Entrez votre mot de adresse mail" onChangeEmail={(e) => {SetUser({...user,email:e.target.value})}} onChangePassword={(e) => {SetUser({...user,password:e.target.value})}} placeholderPassword="Entrez votre mot de passe" onSubmit={(e) => handleSubmit(e)} requiredEmail="true" requiredPassword="true" typeEmail="email" typePassword="password" error={error ? true : false} message={errorMessage}>
            </Signin>
         </div>
        </div>

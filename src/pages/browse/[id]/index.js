@@ -3,7 +3,7 @@ import { getMovieId } from "../../../graphql/queries/movie";
 import { useQuery } from "@apollo/react-hooks";
 import { UseRouter } from "next/router";
 import styles from "./index.module.scss"
-export default function index() {
+export default function Index() {
     const router = UseRouter();
     useEffect(() => {
         document.body.style.backgroundColor = "black";

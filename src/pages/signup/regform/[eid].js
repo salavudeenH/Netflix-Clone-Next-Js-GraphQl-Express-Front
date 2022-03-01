@@ -3,13 +3,13 @@ import styles from './index.module.scss'
 import { UseRouter } from "next/router";
 import authService from "../../../services/auth.service";
 
-export default function index() {
+export default function Index() {
     const router = UseRouter();
     const {eid} = router.query
-    const [user, setUser] = useState({email:eid});
-    const [error, setError] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("");
-    const [token, setToken] = useState("");
+    const [user, SetUser] = useState({email:eid});
+    const [error, SetError] = useState(false);
+    const [errorMessage, SetErrorMessage] = useState("");
+    const [token, SetToken] = useState("");
     const handleSubmit = (e) => {
       console.log(user)
         e.preventDefault();
@@ -17,8 +17,8 @@ export default function index() {
         .then((data) => {
           console.log(data);
           if (data.message) {
-            setError(true);
-            setErrorMessage(data.message);
+            SetError(true);
+            SetErrorMessage(data.message);
             return false;
           }
           localStorage.setItem("token", data.token);
@@ -26,13 +26,13 @@ export default function index() {
         })
         .catch((err) => {
           console.log(err);
-          setError(true);
-          setErrorMessage(err.message)
+          SetError(true);
+          SetErrorMessage(err.message)
         });
       };
       useEffect(() => {
         const token = localStorage.getItem("token");
-        setToken(token)
+        SetToken(token)
       })
       // if(token){
       //   return <div>Access denied</div>
@@ -46,10 +46,10 @@ export default function index() {
            <p>Plus rien à remplir.</p>
            <form onSubmit={(e) => handleSubmit(e)}>
            <div className={styles.Second__Container}>
-            <input className="mb-2" type="text" required={true} placeholder="Votre Nom" onChange={(e) => {setUser({ ...user, firstName: e.target.value })}}/>
-            <input className="mb-2" type="text" required={true} placeholder="Votre Prenom" onChange={(e) => {setUser({ ...user, lastName: e.target.value })}} />
-            <input type="email" defaultValue={eid} required={true} placeholder="Votre Adresse Mail" onChange={(e) => {setUser({...user, email: e.target.value })}} />
-            <input className="mt-4" type="password" required={true} placeholder="Votre Mot de passe" onChange={(e) => {setUser({ ...user, password: e.target.value })}} />
+            <input className="mb-2" type="text" required={true} placeholder="Votre Nom" onChange={(e) => {SetUser({ ...user, firstName: e.target.value })}}/>
+            <input className="mb-2" type="text" required={true} placeholder="Votre Prenom" onChange={(e) => {SetUser({ ...user, lastName: e.target.value })}} />
+            <input type="email" defaultValue={eid} required={true} placeholder="Votre Adresse Mail" onChange={(e) => {SetUser({...user, email: e.target.value })}} />
+            <input className="mt-4" type="password" required={true} placeholder="Votre Mot de passe" onChange={(e) => {SetUser({ ...user, password: e.target.value })}} />
             <button type="submit">Suivant</button>
             {error}
             {errorMessage}

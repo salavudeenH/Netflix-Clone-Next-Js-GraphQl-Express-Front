@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import Link from "next/link";
 
-export default function index(props) {
+export default function Index(props) {
       const { loading, error, data } = useQuery(getFilterMovie, {
         variables: {
           categorie: "621ce52ae1179ec2d2b758c5"

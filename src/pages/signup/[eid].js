@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './index.module.scss'
 import { UseRouter } from "next/router";
 
-export default function index() {
+export default function Index() {
     const router = UseRouter();
     const {eid} = router.query;
     const handleSubmit = (e) => {

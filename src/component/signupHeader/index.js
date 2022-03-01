@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './index.module.scss'
 import { UseRouter } from 'next/router';
 
-export default function index({children}) {
+export default function Index({children}) {
     const router = UseRouter()
     const logout = () => {
         localStorage.removeItem("token")
