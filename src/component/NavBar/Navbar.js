@@ -2,11 +2,11 @@ import React,{ useState, useEffect} from 'react'
 import styles from "./index.module.scss";
 import { AiOutlineSearch,AiTwotoneBell } from 'react-icons/ai';
 import Link from "next/link";
-import { UseRouter } from "next/router";
+import { useRouter } from "next/router";
 
 
 export default function Navbar({children}) {
-    const router = UseRouter();
+    const router = useRouter();
     const [navbar,setNavbar] = useState(false)
     const changeBackground = () => {
         console.log(window.scrollY)
