@@ -48,8 +48,10 @@
 .none{
     display: none;
 }
+.CB{
+    display:flex;
+}
 .Cancel__Button {
-    margin-left: 20px;
     margin-top: 20px;
     min-height: 20px;
     font-weight: 500;
@@ -72,8 +74,3 @@
     display: block;
 }
 
-.test{
-    color: #fff;
-    font-size: 20px;
-}
-    

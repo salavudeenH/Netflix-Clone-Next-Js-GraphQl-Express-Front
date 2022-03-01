@@ -1,9 +1,21 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import styles from './index.module.scss'
 import withAuth from "../../../HOC/withAuth";
-
+import authService from "../../../services/auth.service"
 const Index = () => {
+    const [user, SetUser] = useState({});
     const [plan, SetPlan] = useState(null);
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        authService
+          .getUser(token)
+          .then((data) => {
+            SetUser(data);
+          })
+          .catch((err) => console.log(err));
+      }, []);
+
     const subscribeToPlan = async () => {
         console.log(plan);
         const reqBody =
@@ -13,7 +25,7 @@ const Index = () => {
             ? { id: 1, name: "Standard", quantity: 1 }
             : { id: 2, name: "Premium", quantity: 1 };
         const response = await fetch(
-          `http://localhost:3131/api/v1/users/payments?plan=${plan}`,
+          `http://localhost:3131/api/v1/users/payments?plan=${user._id}`,
           {
             method: "POST",
             headers: {

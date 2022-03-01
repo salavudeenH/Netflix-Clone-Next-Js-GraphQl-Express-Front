@@ -34,3 +34,11 @@ export const getMovieId = gql`
         }
     }
 `
+
+export const Movies = gql`
+mutation createMovie($title:String!,$description: String,$link:String,$director:String,$distributor:String,$duration:String,$age:Int,$video:String,$categorie:[ID],$rating:String,$releaseDate:String){
+      createMovie(title:$title,description:$description,link:$link,director:$director,distributor:$distributor,duration:$duration,age:$age,video:$video,categorie:$categorie,rating:$rating,releaseDate:$releaseDate)
+        {
+          id
+        }
+    },`

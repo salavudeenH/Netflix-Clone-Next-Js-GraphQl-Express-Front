@@ -26,13 +26,12 @@ export default function Index() {
             }
             localStorage.setItem("token", data.token);
             const token = localStorage.getItem("token");
-            
-            if(user.isSuscribe === false){
-              router.push("/signup/planform");
-            }
-            else{
-              router.push("/browse");
-            }
+            // console.log("------> Here in login page", data.isSuscribe);
+        if (data.isSuscribe === false) {
+          router.replace("/signup/planform");
+        } else {
+          router.replace("/browse");
+        }
            
           })
           .catch((err) => {

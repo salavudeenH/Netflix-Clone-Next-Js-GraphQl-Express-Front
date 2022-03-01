@@ -57,7 +57,7 @@ export default function Index() {
             <h2>Abonnement et Facturation</h2>
             <a><button onClick={clickDisabled}> Modifier les Informations </button></a>
             </div>
-            <form className={styles.form__profil} onSubmit={(e) => handleSubmit(e)}>
+            <form type="submit" className={styles.form__profil} onSubmit={(e) => handleSubmit(e)}>
             <div className={styles.Input__Container}>
             <input type="text" value={(user && user.firstName) || ""} onChange={(e) => {SetUser({ ...user, firstName: e.target.value })}}  disabled={disabled}></input>
             <input type="text" value={(user && user.lastName) || ""} onChange={(e) => {SetUser({ ...user, lastName: e.target.value })}} disabled={disabled}/>
@@ -65,9 +65,9 @@ export default function Index() {
             </div>
             <div className="flex">
             <button type="submit" className={disabled ? styles.none : styles.Buttons }>Enregistrer</button>
-            <button className={disabled ?  styles.none : styles.Cancel__Button} onClick={clickDisabledField}>Annuler</button>
             </div>
             </form>
+            <button type="cancel" className={disabled ?  styles.none : styles.Cancel__Button} onClick={clickDisabledField}>Annuler</button>
             {success ? (
                   <Message type="success" message="votre profil a bien été modifié"/>
               ) : ""
