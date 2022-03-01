@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './index.module.scss'
-import { UseRouter } from "next/router";
+import { useRouter } from "next/router";
 
 export default function Index() {
-    const router = UseRouter();
+    const router = useRouter();
     const {eid} = router.query;
     const handleSubmit = (e) => {
         e.preventDefault();

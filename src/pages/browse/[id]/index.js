@@ -1,10 +1,10 @@
 import React,{useEffect} from 'react';
 import { getMovieId } from "../../../graphql/queries/movie";
 import { useQuery } from "@apollo/react-hooks";
-import { UseRouter } from "next/router";
+import { useRouter } from "next/router";
 import styles from "./index.module.scss"
 export default function Index() {
-    const router = UseRouter();
+    const router = useRouter();
     useEffect(() => {
         document.body.style.backgroundColor = "black";
     })
@@ -37,7 +37,7 @@ export default function Index() {
     <p> 2021</p>
     <span>{data.getMovieId.age} +</span>
     <span>HD</span>
-    <button><div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 2V11H2V13H11V22H13V13H22V11H13V2H11Z" fill="currentColor"></path></svg></div></button>
+    <button><div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M11 2V11H2V13H11V22H13V13H22V11H13V2H11Z" fill="currentColor"></path></svg></div></button>
     </div>
     <div className={styles.Movie__Details}>
         <div><h3>Réalisateur : </h3> <p className={styles.info}>{data.getMovieId.director}</p></div>

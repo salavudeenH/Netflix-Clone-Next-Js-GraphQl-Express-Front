@@ -16,11 +16,11 @@ import DocCategorie from "../../component/DocCategorie/Slider"
 import Link from "next/link";
 import { AiOutlineSearch,AiTwotoneBell } from 'react-icons/ai';
 import suscribe from "../../HOC/suscribe"
-import { UseRouter } from "next/router";
+import { useRouter } from "next/router";
 
 const Index = () => {
     const [user, SetUser] = useState({});
-    const router = UseRouter();
+    const router = useRouter();
     const { loading, error, data } = useQuery(getMovie);
     useEffect(() => {
         document.body.style.backgroundColor = "black";
@@ -62,7 +62,7 @@ const Index = () => {
                     navigation
                 >
                     {data.getMovie.map((movie) => (
-                        <SwiperSlide className={styles.Slider__Card}>
+                        <SwiperSlide className={styles.Slider__Card} key={movie.id}>
                              <Link href={`/browse/${movie.id}`}>
                             <img className={styles.Card} src={`${movie.link}`}  title="Smiley face"/>
                             </Link>

@@ -1,5 +1,5 @@
 import '../../styles/globals.css'
-import { UseRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import SignupLayout from '../component/signupHeader/index'
 import Navbar from '../component/NavBar/Navbar'
 import MainLayout from '../component/layout/index'
@@ -7,7 +7,7 @@ import { ApolloProvider } from "@apollo/client";
 import client from "../apollo/apollo-client";
 import Head from "next/head";
 function MyApp({ Component, pageProps}) {
-  const { asPath } = UseRouter();
+  const { asPath } = useRouter();
   
   return (
 

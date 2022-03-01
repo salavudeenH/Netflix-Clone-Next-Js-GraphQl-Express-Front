@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import styles from './index.module.scss'
-import { UseRouter } from "next/router";
+import { useRouter } from "next/router";
 import authService from "../../../services/auth.service";
 
 export default function Index() {
-    const router = UseRouter();
+    const router = useRouter();
     const {eid} = router.query
     const [user, SetUser] = useState({email:eid});
     const [error, SetError] = useState(false);
@@ -42,7 +42,7 @@ export default function Index() {
             <div className={styles.First__Container}>
            <h3>ÉTAPE <span>1 </span>SUR <span>3</span></h3>
            <h1>Créez un mot de passe pour activer votre abonnement</h1>
-           <p>Plus que quelques étapes et c'est fini !</p>
+           <p>Plus que quelques étapes et c&apos;est fini !</p>
            <p>Plus rien à remplir.</p>
            <form onSubmit={(e) => handleSubmit(e)}>
            <div className={styles.Second__Container}>
