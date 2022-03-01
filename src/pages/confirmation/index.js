@@ -9,7 +9,7 @@ const Index = () => {
     return (
       
         <div>
-           Merci d'avoir Souscrit profiter des video
+           Merci d&apos;avoir Souscrit profiter des video
         </div>
     );
 }
