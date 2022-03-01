@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { getMovieId } from "../../graphql/queries/movie";
 import { useQuery } from "@apollo/react-hooks";
 import { useRouter } from "next/router";
+
 import styles from "./index.module.scss"
+
 
 export default function Index() {
     return (

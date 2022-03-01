@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import { useRouter } from "next/router";
 import styles from "./index.module.scss";
-import withAuth from "../../HOC/withAuth";
 
 const Index = () => {
     const router = useRouter();
@@ -17,4 +16,4 @@ const Index = () => {
     );
 }
 
-export default withAuth(Index);
+export default Index;
