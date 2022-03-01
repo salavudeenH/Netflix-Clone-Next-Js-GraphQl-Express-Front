@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    line-height: 80px;
+    border-bottom: 1px solid #e6e6e6;
+
+    .logo {
+        height: 45px;
+        width: 167px;
+        margin-left: 3%;
+        padding-top: 20px
+    }
+
+    a {
+        color: #333;
+        font-weight: 700;
+        font-size: 19px;
+        margin: 0 3%;
+        cursor: pointer;
+    }
+}

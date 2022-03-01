@@ -1,0 +1,79 @@
+.container{
+    width: 95%;
+    width: 1024px;
+    font-size: 1em;
+    padding-left: 200px;
+    padding-right: 100px;
+    padding-top:50px;
+    h1{
+        font-size: 2.15em;
+    }
+    .lines{
+    border-top: 1px solid #999;
+    padding: 0;
+    background-color: inherit;
+    width: 100%;
+    }
+}
+.Info__Sub{
+    .Modifier{
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    h2{
+        font-size: 1.125em;
+        font-weight: 400;
+        color: #757575;
+    }
+
+    input{
+    height: 48px;
+    padding-left: 10px;
+    width: 70%;
+    border: solid 1px #8c8c8c;
+    margin-top: 10px;
+    }
+    input[type="text"][disabled] {
+        background-color: #F0EDEC;
+     }
+    a{
+        color: #0073e6;
+        display: inline;
+        padding-right: 0;
+        border-top: none;
+        padding-top: 5px;
+    }
+}
+.none{
+    display: none;
+}
+.Cancel__Button {
+    margin-left: 20px;
+    margin-top: 20px;
+    min-height: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 4px;
+    color: black;
+    background-color: #D3CFCD;
+    padding: 0.20rem 15.33333333px;
+    display: block;
+}
+.Buttons{
+    margin-top: 20px;
+    min-height: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #e50914;
+    padding: 0.20rem 15.33333333px;
+    display: block;
+}
+
+.test{
+    color: #fff;
+    font-size: 20px;
+}
+    

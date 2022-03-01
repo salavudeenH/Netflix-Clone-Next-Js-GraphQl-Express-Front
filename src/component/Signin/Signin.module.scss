@@ -1,0 +1,65 @@
+.main {
+    min-height: 560px;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 4px;
+    max-width: 450px;
+    margin: 0;
+    width: 100%;
+    padding: 60px 68px 40px;
+
+    h1 {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .Container {
+        width: 100%;
+
+        label {
+            color: black;
+            left: 20px;
+            color: #8c8c8c;
+        }
+
+        input {
+            border-radius: 4px;
+            width: 100%;
+            border: 0;
+            height: 50px;
+            line-height: 50px;
+            padding: 16px 20px 0;
+            font-size: 16px;
+            padding-bottom: 16px;
+            background: #333;
+            color: #fff;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            background-color: #e50914;
+            line-height: normal;
+            width: 100%;
+            padding: 16px;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #fff;
+            border-radius: 3px;
+        }
+    }
+
+    .first_connexion {
+        margin-top:20px;
+        span{
+            color: #737373;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        a{
+            color: #fff;
+        }
+    }
+}
