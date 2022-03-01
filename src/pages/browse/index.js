@@ -15,7 +15,7 @@ import ComedieCategorie from "../../component/ComedieCategorie/Slider"
 import DocCategorie from "../../component/DocCategorie/Slider"
 import Link from "next/link";
 import { AiOutlineSearch,AiTwotoneBell } from 'react-icons/ai';
-import suscribe from "../../HOC/suscribe"
+import suscribe from "../../HOC/withAuth"
 import { useRouter } from "next/router";
 
 const Index = () => {
