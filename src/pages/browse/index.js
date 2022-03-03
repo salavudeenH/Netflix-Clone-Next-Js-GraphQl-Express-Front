@@ -29,9 +29,6 @@ const Index = () => {
           .getUser(token)
           .then((data) => {
             SetUser(data);
-            if (data.isSuscribe === false) {
-                router.push("/signup/planform");
-              }
             console.log("------>", data);
           })
           .catch((err) => console.log(err));
