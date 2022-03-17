@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Netflix Clone Front : 
+https://netflixv2.vercel.app/
+
+Netflix Back : 
+https://github.com/salavudeenH/-Netflix-Clone-Next-Js-GraphQl-Express-Back
+
 
 ## Getting Started
 
