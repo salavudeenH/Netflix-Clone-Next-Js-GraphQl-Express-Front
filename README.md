@@ -1,7 +1,7 @@
-Netflix Clone Front : 
-https://netflixv2.vercel.app/
+## Netflix Clone Front Next JS 
 
-Netflix Back : 
+
+## Netflix Back Express + GraphQl + Stripe: 
 https://github.com/salavudeenH/-Netflix-Clone-Next-Js-GraphQl-Express-Back
 
 
